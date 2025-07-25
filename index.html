@@ -1,37 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Hello Kiity Surprise</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello Kitty Surprise</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Dark Mode Toggle -->
+  <button id="darkModeToggle">Toggle Dark Mode 🌙</button>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="bg-music.mp3" type="audio/mp3">
+  </audio>
 
   <!-- Landing Section -->
   <section id="landing" class="landing">
     <div class="center-box">
       <h1>Hi Mawa barfi 🩷</h1>
       <p class="sub-text">I've got something cute for you...</p>
-      <button id="showToysBtn">Click here to see your kiity 🎀</button>
+      <button id="showToysBtn">Click here to see your kitty 🎀</button>
     </div>
   </section>
 
   <!-- Toys Section -->
   <section id="toysPage" class="toys-page hidden">
-    <h2>Pick your favorite Hello Kiity 🎁</h2>
+    <h2>Pick your favorite Hello Kitty 🎁</h2>
     <div class="toys-grid">
-      <img src="kiity1.png" alt="Kiity 1" class="toy">
-      <img src="kiity2.png" alt="Kiity 2" class="toy">
-      <img src="kiity3.png" alt="Kiity 3" class="toy">
-      <img src="kiity4.png" alt="Kiity 4" class="toy">
+      <img src="kiity1.png" alt="Kitty 1" class="toy" />
+      <img src="kiity2.png" alt="Kitty 2" class="toy" />
+      <img src="kiity3.png" alt="Kitty 3" class="toy" />
+      <img src="kiity4.png" alt="Kitty 4" class="toy" />
     </div>
 
     <div id="message" class="hidden">
       <h3>Harshit will buy this for you 💝</h3>
+      <button id="goToLove">Next ➤</button>
     </div>
+  </section>
+
+  <!-- Love Page -->
+  <section id="lovePage" class="hidden love-page">
+    <h2>What do you want to give Harshit?</h2>
+    <button class="love-btn" id="hugBtn">Hug 🤗</button>
+    <button class="love-btn" id="kissBtn">Kiss 😘</button>
+  </section>
+
+  <!-- Final Page -->
+  <section id="finalPage" class="hidden final-page">
+    <h2>It means you like Harshit 💖</h2>
+    <p>Are you sure?</p>
+    <button id="yesBtn">Yes 🥰</button>
+    <button id="noBtn">No 🙈</button>
   </section>
 
   <script src="script.js"></script>
 </body>
 </html>
+
+
 
