@@ -10,6 +10,29 @@ body {
   background-position: center;
   color: #fff;
   text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  background-image: none;
+  color: #ffb6c1;
+}
+
+button {
+  padding: 15px 30px;
+  background-color: #ffb6c1;
+  border: none;
+  border-radius: 12px;
+  font-size: 1em;
+  color: white;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px #ff69b4;
+  transition: 0.3s;
+}
+button:hover {
+  background-color: #ff69b4;
 }
 
 .center-box {
@@ -30,25 +53,22 @@ h1 {
   margin-bottom: 20px;
 }
 
-button {
-  padding: 15px 30px;
-  background-color: #ffb6c1;
-  border: none;
-  border-radius: 12px;
-  font-size: 1em;
-  color: white;
-  cursor: pointer;
-  box-shadow: 2px 2px 10px #ff69b4;
-  transition: 0.3s;
-}
-button:hover {
-  background-color: #ff69b4;
-}
-
-.toys-page {
+.toys-page,
+.love-page,
+.confess-page,
+.final-page {
   padding: 2rem;
   background-color: #fff0f5;
   color: #ff1493;
+  min-height: 100vh;
+}
+
+body.dark-mode .toys-page,
+body.dark-mode .love-page,
+body.dark-mode .confess-page,
+body.dark-mode .final-page {
+  background-color: #1e1e1e;
+  color: #ffb6c1;
 }
 
 .toys-grid {
@@ -82,5 +102,24 @@ button:hover {
 @keyframes float {
   0% { background-position: 0 0; }
   100% { background-position: 1000px 0; }
+}
+
+/* Toggle dark mode button style */
+#toggleDarkMode {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  font-weight: bold;
+  transition: 0.3s;
+}
+#toggleDarkMode:hover {
+  background-color: #d1468c;
 }
 
